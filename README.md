@@ -20,6 +20,7 @@ Git clone the library
 # Example installation
 
  # Installing dependencies
+  
   sudo apt-get update  
   sudo apt-get install git  
   sudo apt-get install python-pip  

@@ -42,9 +42,11 @@ Git clone the library
 Get detailed help page by typing:
 
  # Script used for calculating active network
+ 
  bash shpaths_analysis_pipeline_s1.sh -h 
 
 (or)
 
  # Script used for calculating repressed network
+ 
  bash shpaths_analysis_pipeline_s2.sh -h

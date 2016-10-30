@@ -21,19 +21,31 @@ Git clone the library
 
  # Installing dependencies
   sudo apt-get update
+  
   sudo apt-get install git
+  
   sudo apt-get install python-pip
+  
   git clone https://github.com/networkdynamics/zenlib.git
+  
   virtualenv --distribute zenlibenv
+  
   sudo pip install cython
+  
   sudo pip install numpy
+  
   sudo pip install networkx
+  
   cd zenlib/src/
+  
   sudo python setup.py install
+  
   
  # Installing the pipeline
   cd
+  
   git clone https://github.com/AbhinandanD/shp_pipeline.git
+  
   cd shp_pipeline.git/
 
 # HELP PAGE

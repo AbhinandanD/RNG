@@ -17,35 +17,23 @@ shp_pipeline(insert new name for the pipeline) can identify highly active & repr
 # INSTALLATION
 Git clone the library
 
-# Example INSTALLATION
+# Example installation
 
  # Installing dependencies
-  sudo apt-get update
-  
-  sudo apt-get install git
-  
-  sudo apt-get install python-pip
-  
-  git clone https://github.com/networkdynamics/zenlib.git
-  
-  virtualenv --distribute zenlibenv
-  
-  sudo pip install cython
-  
-  sudo pip install numpy
-  
-  sudo pip install networkx
-  
-  cd zenlib/src/
-  
-  sudo python setup.py install
-  
+  sudo apt-get update  
+  sudo apt-get install git  
+  sudo apt-get install python-pip  
+  git clone https://github.com/networkdynamics/zenlib.git  
+  virtualenv --distribute zenlibenv  
+  sudo pip install cython  
+  sudo pip install numpy  
+  sudo pip install networkx  
+  cd zenlib/src/  
+  sudo python setup.py install  
   
  # Installing the pipeline
-  cd
-  
-  git clone https://github.com/AbhinandanD/shp_pipeline.git
-  
+  cd  
+  git clone https://github.com/AbhinandanD/shp_pipeline.git  
   cd shp_pipeline.git/
 
 # HELP PAGE

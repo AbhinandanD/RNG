@@ -18,6 +18,7 @@ shp_pipeline(insert new name for the pipeline) can identify highly active & repr
 To install shp_pipeline, type the following in your terminal:
 
 $ git clone https://github.com/AbhinandanD/shp_pipeline.git
+
 $ cd shp_pipeline/
 
 # HELP PAGE

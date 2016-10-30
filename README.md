@@ -15,17 +15,32 @@ shp_pipeline(insert new name for the pipeline) can identify highly active & repr
 * Perl (v>5)
 
 # INSTALLATION
-To install shp_pipeline, type the following in your terminal:
+Git clone the library
 
-$ git clone https://github.com/AbhinandanD/shp_pipeline.git
+# Example INSTALLATION
 
-$ cd shp_pipeline/
+ # Installing dependencies
+  sudo apt-get update
+  sudo apt-get install git
+  sudo apt-get install python-pip
+  git clone https://github.com/networkdynamics/zenlib.git
+  virtualenv --distribute zenlibenv
+  sudo pip install cython
+  sudo pip install numpy
+  sudo pip install networkx
+  cd zenlib/src/
+  sudo python setup.py install
+  
+ # Installing the pipeline
+  cd
+  git clone https://github.com/AbhinandanD/shp_pipeline.git
+  cd shp_pipeline.git/
 
 # HELP PAGE
 Get detailed help page by typing:
 
-$ bash shpaths_analysis_pipeline_s1.sh -h (Active Network Calculator)
+bash shpaths_analysis_pipeline_s1.sh -h (Active Network Calculator)
 
 (or)
 
-$ bash shpaths_analysis_pipeline_s2.sh -h (Repressed Network Calculator)
+bash shpaths_analysis_pipeline_s2.sh -h (Repressed Network Calculator)

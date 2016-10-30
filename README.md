@@ -41,8 +41,8 @@ Git clone the library
 # HELP PAGE
 Get detailed help page by typing:
 
-bash shpaths_analysis_pipeline_s1.sh -h (Active Network Calculator)
+bash shpaths_analysis_pipeline_s1.sh -h 
 
 (or)
 
-bash shpaths_analysis_pipeline_s2.sh -h (Repressed Network Calculator)
+bash shpaths_analysis_pipeline_s2.sh -h

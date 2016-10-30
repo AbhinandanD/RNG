@@ -33,6 +33,7 @@ Git clone the library
   sudo python setup.py install  
   
  # Installing the pipeline
+ 
   cd  
   git clone https://github.com/AbhinandanD/shp_pipeline.git  
   cd shp_pipeline.git/

@@ -56,6 +56,7 @@ OR
 bash rrng.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f upper_fold_change_cut-off(value)
 
 PARAMETERS
+----------
 
  * -d -> Tab delimited file having the normalised signal intensity for genes in the condition of interest given as GENE'\t'Normalised_signal_instensity. 
 

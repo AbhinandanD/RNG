@@ -83,3 +83,23 @@ bash arng.sh -h
 (or)
 
 bash rrng.sh -h
+
+# OUTPUT
+
+Based on the input parameters (d,c,f & p) an output folder will be created with results. Example, output_arng_d_c_f_p/ for active response network and output_rrng_d_c_f_p/ for repressed response network. 
+
+The pipeline creates the following files, based on the input parameters ('d'-disease, 'c'-control, 'f'-fold change & 'p'-percent cut-off):
+
+* ew_c & ew_d : Edge weight of conditions 'c' & 'd' used to compute shortest paths.
+* fc_d : Fold change calculated as condition 'd'/'c'. (For active response network)
+* fc_c : Fold change calculated as condition 'c'/'d'. (For repressed response network)
+* imp_deg_d : This file contains a list of genes that meet the following criteria:
+ * 'f' fold upregulated/downregulated in condition 'd' for active/repressed response network respectively.
+ * Participate in the paths unique to top 'p' % of the 'd' network.
+* imp_uniq_ppd : Paths that occur in the top 'p' % of 'd' condition and are not taken in 'c' condition.
+* sorted_shpaths_c & sorted_shpaths_d : Shortest paths of condition 'c' & 'd', sorted based on normalised path cost.
+* topnet_d : Breakdown network of imp_uniq_ppd (Paths that occur in the top 'p' % of 'd' condition and are not taken in 'c' condition)
+* up_deg_d : All upper differentially expressed genes based on 'f' fold change as specified by the user. (For active response network)
+* down_deg_d : All lower differentially expressed genes based on 'f' fold change as specified by the user. (For repressed response network)
+* log.txt : Log file for geeks, listing all steps performed by the pipeline and the time taken.
+* READ_ME.txt: Description of all output files from the pipeline

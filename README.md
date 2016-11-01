@@ -65,9 +65,9 @@ PARAMETERS
 
 -n -> Tab delimited network file given as: NODE_A'\t'NODE_B
 
--f ->  Fold change cut-off. Not log normalised.
+-f ->  Fold change cut-off. Not log normalised. Example : when -f is 2, Response network will be calculated based on '2' fold up or down in the active response network generator (arng.sh) or the repressed response network generator (rrng.sh) respectively.  
 
--p -> Top percentile cut-off
+-p -> Top percent cut-off. Example: when -p is 1, all paths in the 99th percentile (top 1 percent) will be used for response network identification. Values can range from 0.01 to 99.9.
 
 NOTE: In files -d and -c, the expression values should be normalised signal intensities or counts, they should not be log transformed. All files supplied to the script should be in the RNG/ directory.
 

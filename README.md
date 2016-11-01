@@ -1,12 +1,8 @@
-# Shp_Pipeline
-
-Testing for Shortest path pipeline
-
-What follows will be the official README
+# Response Network Generator (RNG)
 
 # INTRODUCTION
 
-shp_pipeline(insert new name for the pipeline) can identify highly active & repressed paths and also highly influential nodes from your transcriptome data and protein-protein interaction network. Useful for gaining mechanistic insights, identifying influential paths and hubs, for target discovery and for biomarker identification.
+RNG can identify highly active & repressed paths and also highly influential nodes from your transcriptome data and protein-protein interaction network. Useful for gaining mechanistic insights, identifying influential paths and hubs, for target discovery and for biomarker identification.
 
 # MINIMUM REQUIREMENTS
 * Linux system with minimum 8GB of RAM and 10GB of storage space

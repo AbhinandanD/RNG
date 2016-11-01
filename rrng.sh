@@ -21,14 +21,13 @@ PARAMETERS
 
 -c -> Tab delimited file having the normalised signal intensity for genes in the control condition given as GENE""'\t'""Normalised_signal_instensity.
 
-NOTE: The genes in files -d & -c should be given in their official gene symbol format and sorted based on alphabetical order. Both files should have the same set of genes. Normalised signal intensities should not be log transformed.
-
 -n -> Tab delimited network file given as: NODE_A""'\t'""NODE_B
 
 -f ->  repressed fold change cut-off. Not log normalised.
 
 -p -> Top percentile cut-off
 
+NOTE: In files -d and -c, the expression values should be normalised signal intensities or counts, they should not be log transformed. All files supplied to the script should be in the RNG/ directory.
 
 ------------
 

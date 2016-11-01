@@ -37,7 +37,9 @@ Git clone the library
 Then, to ensure complete working of the pipeline run either of the following commands:
 
   bash arng.sh -d disease -c control -n net_1000.txt -p 1 -f 2
+  
                         OR                    
+  
   bash rrng.sh -d disease -c control -n net_1000.txt -p 1 -f 2
 
 

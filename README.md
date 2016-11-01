@@ -34,7 +34,9 @@ Git clone the library
   git clone https://github.com/AbhinandanD/RNG.git  
   cd RNG.git/
 
-Then, to ensure complete working of the pipeline run either of the following commands:
+# TEST RUN
+
+Then, to ensure complete working of the pipeline run either of the following commands in the RNG/ directory:
 
   bash arng.sh -d disease -c control -n net_1000.txt -p 1 -f 2
   
@@ -53,6 +55,9 @@ bash arng.sh -d condition_si(file) -c control_si(file) -n network(file) -p perce
 OR
 
 bash rrng.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f upper_fold_change_cut-off(value)
+
+
+NOTE: All files supplied to the script should be in the RNG/ directory
 
 
 PARAMETERS
@@ -82,5 +87,3 @@ bash arng.sh -h
 (or)
 
 bash rrng.sh -h
- 
- 

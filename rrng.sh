@@ -5,13 +5,13 @@ if [ "$1" == "-h" ]; then
 
   echo "
 ----------------------------------------------------------------
-SHORTEST PATH ANALYSIS PIPELINE - v.3.0 - INSTRUCTIONS/HELP PAGE
+Repressed Response Network Generator - INSTRUCTIONS/HELP PAGE
 ----------------------------------------------------------------
 
 RUN AS :
 --------
 
-$ bash shpaths_analysis_pipeline.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f lower_fold_change_cut-off(value)
+$ bash rrng.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f lower_fold_change_cut-off(value)
 
 
 PARAMETERS
@@ -71,7 +71,7 @@ done
 
 #Begin Analysis
 echo "-------------------------------------
-Shortest_paths_analysis_pipeline_v3.0
+Repressed Response Network Generator
 -------------------------------------" > log.txt
 echo "TASK                 : TIME
 Reading input files  : `date | awk '{print $4}'` 
@@ -221,8 +221,8 @@ This pipeline generates the following output files (sorted based on alphabetical
 
 # Compiling results
 echo "Compiling results.." `date | awk '{print $4}'` >> log.txt
-mkdir out_rn_${d}_${c}_${f}_${p}/
-mv ew_$c ew_$d fc_$c imp_deg_$d imp_uniq_pp$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d repressed_net_$d down_deg_$d out_rn_${d}_${c}_${f}_${p}/
+mkdir out_rrng_${d}_${c}_${f}_${p}/
+mv ew_$c ew_$d fc_$c imp_deg_$d imp_uniq_pp$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d repressed_net_$d down_deg_$d out_rrng_${d}_${c}_${f}_${p}/
 
 # Deleting temporary files
 echo "Deleting temporary files.." `date | awk '{print $4}'` >> log.txt
@@ -237,4 +237,4 @@ echo "Total run time (in minutes) : " $runtime >> log.txt
 echo "----------------------------------------" >> log.txt
 
 # End & move log to output 
-mv log.txt out_rn_${d}_${c}_${f}_${p}/
+mv log.txt out_rrng_${d}_${c}_${f}_${p}/

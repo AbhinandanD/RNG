@@ -56,10 +56,6 @@ OR
 
 bash rrng.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f upper_fold_change_cut-off(value)
 
-
-NOTE: All files supplied to the script should be in the RNG/ directory
-
-
 PARAMETERS
 ----------
 
@@ -67,13 +63,13 @@ PARAMETERS
 
 -c -> Tab delimited file having the normalised signal intensity for genes in the control condition given as GENE'\t'Normalised_signal_instensity.
 
-NOTE: In files -d and -c, the expression values should be normalised signal intensities or counts, they should not be log transformed.
-
 -n -> Tab delimited network file given as: NODE_A'\t'NODE_B
 
 -f ->  Fold change cut-off. Not log normalised.
 
 -p -> Top percentile cut-off
+
+NOTE: In files -d and -c, the expression values should be normalised signal intensities or counts, they should not be log transformed. All files supplied to the script should be in the RNG/ directory.
 
 HELP PAGE
 ------------

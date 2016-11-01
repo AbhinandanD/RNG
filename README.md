@@ -31,18 +31,27 @@ Git clone the library
  # Installing the pipeline
  
   cd  
-  git clone https://github.com/AbhinandanD/shp_pipeline.git  
-  cd shp_pipeline.git/
+  git clone https://github.com/AbhinandanD/RNG.git  
+  cd RNG.git/
+
+Then, to ensure complete working of the pipeline run either of the following commands:
+
+  bash arng.sh -d disease -c control -n net_1000.txt -p 1 -f 2
+                        OR                    
+  bash rrng.sh -d disease -c control -n net_1000.txt -p 1 -f 2
+
 
 # HELP PAGE
 Get detailed help page by typing:
 
  # Script used for calculating active network
  
- bash shpaths_analysis_pipeline_s1.sh -h 
+ bash arng.sh -h 
 
 (or)
 
  # Script used for calculating repressed network
  
- bash shpaths_analysis_pipeline_s2.sh -h
+ bash rrng.sh -h
+ 
+ 

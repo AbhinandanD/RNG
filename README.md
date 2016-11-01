@@ -17,7 +17,6 @@ Git clone the library
 
  # Installing dependencies
   
-  sudo apt-get update  
   sudo apt-get install git  
   sudo apt-get install python-pip  
   git clone https://github.com/networkdynamics/zenlib.git  

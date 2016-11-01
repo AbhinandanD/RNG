@@ -1,16 +1,16 @@
 # Response Network Generator (RNG)
 
-# INTRODUCTION
+# Introduction
 
 RNG can identify highly active & repressed paths and also highly influential nodes from your transcriptome data and protein-protein interaction network. Useful for gaining mechanistic insights, identifying influential paths and hubs, for target discovery and for biomarker identification.
 
-# MINIMUM REQUIREMENTS
+# Minimum requirements
 * Linux system with minimum 8GB of RAM and 10GB of storage space
 * Python (v-2.7) & Python dependencies: networkx, zen, numpy, cython
 * Git, for installing this tool and python dependencies.
 * Perl (v>5)
 
-# INSTALLATION
+# Installation
 Git clone the library
 
 # Example installation
@@ -34,7 +34,7 @@ Git clone the library
   git clone https://github.com/AbhinandanD/RNG.git  
   cd RNG.git/
 
-# TEST RUN
+# Test run
 
 Then, to ensure complete working of the pipeline run either of the following commands in the RNG/ directory:
 
@@ -45,10 +45,9 @@ Then, to ensure complete working of the pipeline run either of the following com
   bash rrng.sh -d disease -c control -n net_1000.txt -p 1 -f 2
 
 
-# HELP PAGE
+# Help Page
 
-RUN AS :
---------
+Run The pipeline as :
 
 bash arng.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f upper_fold_change_cut-off(value)
 
@@ -57,7 +56,6 @@ OR
 bash rrng.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f upper_fold_change_cut-off(value)
 
 PARAMETERS
-----------
 
 -d -> Tab delimited file having the normalised signal intensity for genes in the condition of interest given as GENE'\t'Normalised_signal_instensity. 
 
@@ -79,7 +77,7 @@ bash arng.sh -h
 
 bash rrng.sh -h
 
-# OUTPUT
+# Output
 
 Based on the input parameters (d,c,f & p) an output folder will be created with results. Example, output_arng_d_c_f_p/ for active response network and output_rrng_d_c_f_p/ for repressed response network. 
 

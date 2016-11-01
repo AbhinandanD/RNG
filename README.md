@@ -71,13 +71,10 @@ PARAMETERS
 
 NOTE: In files -d and -c, the expression values should be normalised signal intensities or counts, they should not be log transformed. All files supplied to the script should be in the RNG/ directory.
 
-HELP PAGE
-------------
-
+ #Help page from command line
 -h -> Displays this help page.
+ #Example
 
-Example
--------
 bash arng.sh -h
 
 (or)

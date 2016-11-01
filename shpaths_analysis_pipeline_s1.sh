@@ -4,14 +4,14 @@
 if [ "$1" == "-h" ]; then
 
   echo "
--------------------------------------------------------------------
-SHORTEST PATH ANALYSIS PIPELINE S1 - v.3.0 - INSTRUCTIONS/HELP PAGE
--------------------------------------------------------------------
+-----------------------------------------------------------
+Active Response Network Generator - INSTRUCTIONS/HELP PAGE
+-----------------------------------------------------------
 
 RUN AS :
 --------
 
-$ bash shpaths_analysis_pipeline_s1.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f upper_fold_change_cut-off(value)
+$ bash arng.sh -d condition_si(file) -c control_si(file) -n network(file) -p percentile_cut-off(value) -f upper_fold_change_cut-off(value)
 
 
 PARAMETERS
@@ -70,7 +70,7 @@ done
 
 #Begin Analysis
 echo "-------------------------------------
-Shortest_paths_analysis_pipeline_s1_v3.0
+Active Response Network Generator
 -------------------------------------" > log.txt
 echo "TASK                 : TIME
 Reading input files  : `date | awk '{print $4}'` 
@@ -220,8 +220,8 @@ This pipeline generates the following output files (sorted based on alphabetical
 
 # Compiling results
 echo "Compiling results.." `date | awk '{print $4}'` >> log.txt
-mkdir out_an_${d}_${c}_${f}_${p}/
-mv ew_$c ew_$d fc_$d imp_deg_$d imp_uniq_pp$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d topnet_$d up_deg_$d out_an_${d}_${c}_${f}_${p}/
+mkdir out_arng_${d}_${c}_${f}_${p}/
+mv ew_$c ew_$d fc_$d imp_deg_$d imp_uniq_pp$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d topnet_$d up_deg_$d out_arng_${d}_${c}_${f}_${p}/
 
 # Deleting temporary files
 echo "Deleting temporary files.." `date | awk '{print $4}'` >> log.txt
@@ -236,4 +236,4 @@ echo "Total run time (in minutes) : " $runtime >> log.txt
 echo "----------------------------------------" >> log.txt
 
 # End & move log to output 
-mv log.txt out_an_${d}_${c}_${f}_${p}/
+mv log.txt out_arng_${d}_${c}_${f}_${p}/

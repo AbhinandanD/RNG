@@ -45,15 +45,11 @@ Then, to ensure complete working of the pipeline run either of the following com
 
 # HELP PAGE
 Get detailed help page by typing:
-
- # Script used for calculating active network
  
  bash arng.sh -h 
-
-(or)
-
- # Script used for calculating repressed network
  
+(or)
+  
  bash rrng.sh -h
  
  

@@ -6,7 +6,7 @@ RNG can identify highly active & repressed paths and also highly influential nod
 
 # Minimum requirements
 * Linux system with minimum 8GB of RAM and 10GB of storage space
-* Python (v-2.7) & Python dependencies: networkx, zen, numpy, cython
+* Python (v-2.7) & Python dependencies: [zen](https://github.com/networkdynamics/zenlib), numpy, cython
 * Git, for installing this tool and python dependencies.
 * Perl (v>5)
 
@@ -23,7 +23,6 @@ Git clone the library
   virtualenv --distribute zenlibenv  
   sudo pip install cython  
   sudo pip install numpy  
-  sudo pip install networkx  
   cd zenlib/src/  
   sudo python setup.py install  
   

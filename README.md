@@ -31,7 +31,7 @@ Git clone the library
  
   cd  
   git clone https://github.com/AbhinandanD/RNG.git  
-  cd RNG.git/
+  cd RNG/
 
 # Test run
 

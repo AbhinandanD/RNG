@@ -199,6 +199,8 @@ This pipeline generates the following output files (sorted based on alphabetical
 
 * log.txt : Log file for geeks, listing all steps performed by the pipeline and the time taken.
 
+* nw_$c & nw_$d : Node weights of $c & $d used to compute the Edge weights.
+
 * READ_ME.txt : This read me file.
 
 * sorted_shpaths_$c & sorted_shpaths_$d : Shortest paths of $c & $d, sorted based on normalised path cost.
@@ -220,7 +222,7 @@ This pipeline generates the following output files (sorted based on alphabetical
 # Compiling results
 echo "Compiling results.." `date | awk '{print $4}'` >> log.txt
 mkdir out_arng_${d}_${c}_${f}_${p}/
-mv ew_$c ew_$d fc_$d imp_deg_$d nw_$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d topnet_$d uniq_pp$d up_deg_$d out_arng_${d}_${c}_${f}_${p}/
+mv ew_$c ew_$d fc_$d imp_deg_$d nw_$c nw_$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d topnet_$d uniq_pp$d up_deg_$d out_arng_${d}_${c}_${f}_${p}/
 
 # Deleting temporary files
 echo "Deleting temporary files.." `date | awk '{print $4}'` >> log.txt

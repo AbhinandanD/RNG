@@ -88,10 +88,11 @@ The pipeline creates the following files, based on the input parameters ('d'-dis
 * imp_deg_d : This file contains a list of genes that meet the following criteria:
  * 'f' fold upregulated/downregulated in condition 'd' for active/repressed response network respectively.
  * Participate in the paths unique to top 'p' % of the 'd' network.
-* imp_uniq_ppd : Paths that occur in the top 'p' % of 'd' condition and are not taken in 'c' condition.
+* nw_$d : Node weights of $d used to compute the Edge weights.
 * sorted_shpaths_c & sorted_shpaths_d : Shortest paths of condition 'c' & 'd', sorted based on normalised path cost.
 * topnet_d : Breakdown network of imp_uniq_ppd (Paths that occur in the top 'p' % of 'd' condition and are not taken in 'c' condition)
 * up_deg_d : All upper differentially expressed genes based on 'f' fold change as specified by the user. (For active response network)
 * down_deg_d : All lower differentially expressed genes based on 'f' fold change as specified by the user. (For repressed response network)
 * log.txt : Log file for geeks, listing all steps performed by the pipeline and the time taken.
 * READ_ME.txt: Description of all output files from the pipeline
+* uniq_ppd : Paths that occur in the top 'p' % of 'd' condition and are not taken in 'c' condition.

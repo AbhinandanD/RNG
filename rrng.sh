@@ -175,7 +175,7 @@ rm -f comma_uniq_pp$d
 
 # Identifying important DEG's in the repressed network
 echo "Identifying important DEG's in the repressed network" `date | awk '{print $4}'` >> log.txt
-perl try-path-edit.pl imp_uniq_pp$d | sed 's/ /\n/g' | sed '/^$/d' | sort -u > repressed_net_$d
+perl try-path-edit.pl uniq_pp$d | sed 's/ /\n/g' | sed '/^$/d' | sort -u > repressed_net_$d
 awk '{print ","$0","}' imp_uniq_pp$d  > comma_imp_uniq_pp$d
 cat down_deg_$d | while read i; do echo $i `grep -n ",$i," comma_imp_uniq_pp$d | head -1 `; done | awk '{if($2>0) print $1}' > imp_deg_$d
 rm -f comma_imp_uniq_pp$d
@@ -200,32 +200,32 @@ This pipeline generates the following output files (sorted based on alphabetical
 		#.) $f fold down regulated in condition $d
 		#.) Participate in the paths unique to top $p % of the $d network.
 
-* imp_uniq_pp$d : Paths that occur in the top $p % of $d condition and are not taken in $c condition.
-
 * log.txt : Log file for geeks, listing all steps performed by the pipeline and the time taken.
 
 * READ_ME.txt : This read me file.
 
-* repressed_net_$d : Breakdown network of imp_uniq_pp$d (Paths that occur in the top $p % of $d condition and are not taken in $c condition)
+* repressed_net_$d : Breakdown network of uniq_pp$d (Paths that occur in the top $p % of $d condition and are not taken in $c condition)
 
 * sorted_shpaths_$c & sorted_shpaths_$d : Shortest paths of $c & $d, sorted based on normalised path cost.
 
-	***************************************************************************
-	***   Authors: Abhinandan Devaprasad, Abhilash Mohan, Awanti Sambarey   ***
-	***                                                                     ***  
-	***    Send queries to Abhinandan Devaprasad at abhi2308@gmail.com      *** 
-	***************************************************************************
+* uniq_pp$d : Paths that occur in the top $p % of $d condition and are not taken in $c condition.
+
+	*********************************************************************************************
+	***   Authors: Abhinandan Devaprasad, Abhilash Mohan, Awanti Sambarey, Nagasuma Chandra   ***
+	***                                                                                       ***  
+	***            Send queries to Abhinandan Devaprasad at abhi2308@gmail.com                *** 
+	*********************************************************************************************
 
 " > READ_ME.txt
 
 # Compiling results
 echo "Compiling results.." `date | awk '{print $4}'` >> log.txt
 mkdir out_rrng_${d}_${c}_${f}_${p}/
-mv ew_$c ew_$d fc_$c imp_deg_$d imp_uniq_pp$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d repressed_net_$d down_deg_$d out_rrng_${d}_${c}_${f}_${p}/
+mv down_deg_$d ew_$c ew_$d fc_$c imp_deg_$d nw_$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d repressed_net_$d uniq_pp$d out_rrng_${d}_${c}_${f}_${p}/
 
 # Deleting temporary files
 echo "Deleting temporary files.." `date | awk '{print $4}'` >> log.txt
-rm -rf cpp$d$c imp_deg_p$d nw_$d p$c p$d pp$c pp$d sh_paths_ew_$c sh_paths_ew_$d tpa_paths_$d uniq_pp$c uniq_pp$d
+rm -rf cpp$d$c imp_deg_p$d imp_uniq_pp$d p$c p$d pp$c pp$d sh_paths_ew_$c sh_paths_ew_$d tpa_paths_$d uniq_pp$c
 
 # INITIATE END SEQUENCE
 echo "Ending analysis for.." $d $c $n `date | awk '{print $4}'` >> log.txt

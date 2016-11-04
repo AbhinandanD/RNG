@@ -43,7 +43,6 @@ DEPENDENCIES
   exit 0
 fi
 
-
 # Setting parameters
 while [ "$1" != "" ]; do
     case $1 in

@@ -201,7 +201,7 @@ This pipeline generates the following output files (sorted based on alphabetical
 
 * log.txt : Log file for geeks, listing all steps performed by the pipeline and the time taken.
 
-* nw_$c & nw_$d : Node weights of $c & $d used to compute the Edge weights.
+* nw_$d : Node weights of $d used to compute the Edge weights.
 
 * READ_ME.txt : This read me file.
 
@@ -222,7 +222,7 @@ This pipeline generates the following output files (sorted based on alphabetical
 # Compiling results
 echo "Compiling results.." `date | awk '{print $4}'` >> log.txt
 mkdir out_rrng_${d}_${c}_${f}_${p}/
-mv down_deg_$d ew_$c ew_$d fc_$c imp_deg_$d nw_$c nw_$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d repressed_net_$d uniq_pp$d out_rrng_${d}_${c}_${f}_${p}/
+mv down_deg_$d ew_$c ew_$d fc_$c imp_deg_$d nw_$d READ_ME.txt sorted_shpaths_$c sorted_shpaths_$d repressed_net_$d uniq_pp$d out_rrng_${d}_${c}_${f}_${p}/
 
 # Deleting temporary files
 echo "Deleting temporary files.." `date | awk '{print $4}'` >> log.txt
